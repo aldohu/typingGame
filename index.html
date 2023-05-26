@@ -45,22 +45,26 @@
 		</div>
 
 		<main id="main">
-			<h2>👩‍💻 Speed Typer 👨‍💻</h2>
-			<small>Type the following:</small>
-			<h1 id="word"></h1>
-			<input
-				type="text"
-				placeholder="Type the following word..."
-			/>
-			<p class="time-container">Time left: <span id="time">10s</span></p>
+			<div class="active">
+				<h2>👩‍💻 Speed Typer 👨‍💻</h2>
+				<small>Type the following:</small>
+				<h1 id="word"></h1>
+				<input
+					class="typing-place"
+					type="text"
+					placeholder="Type the following word..."
+				/>
+				<p class="time-container">Time left: <span id="time">10s</span></p>
 
-			<p class="score-container">Score: <span id="score">0</span></p>
-
+				<p class="score-container">Score: <span id="score">0</span></p>
+			</div>
 			<div
 				id="end-game-container"
 				class="end-game-container"
 			></div>
 		</main>
-		<button><i class="fas fa-cog"></i></button>
+		<div class="btn-container">
+			<button class="btn"><i class="fas fa-cog"></i></button>
+		</div>
 	</body>
 </html>

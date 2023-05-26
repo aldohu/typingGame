@@ -42,9 +42,9 @@ body {
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 15px;
-	width: 800px;
-	max-width: 45%;
-	border: 2px solid red;
+	width: 550px;
+	max-width: 55%;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 	height: 65vh;
 	border-radius: 5px;
 }
@@ -62,13 +62,14 @@ h2 {
 	background-color: rgba(0, 0, 0, 0.3);
 	width: 90%;
 	border-radius: 5px;
+	text-align: center;
 }
 .active {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border: 2px solid blue;
+
 	width: 100%;
 	height: 100%;
 	margin-top: 20px;
@@ -91,7 +92,7 @@ h2 {
 .time-container,
 .score-container {
 	position: absolute;
-	top: 0px;
+	top: 50px;
 }
 .time-container {
 	left: 0;
@@ -99,5 +100,39 @@ h2 {
 .score-container {
 	right: 0;
 }
-#end-game-container {
+#end-game-container.show {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.hide {
+	animation: hide 0.5s linear 1;
+	animation-fill-mode: forwards;
+}
+.show {
+	animation-fill-mode: forwards;
+	animation: show 0.5s linear 1;
+}
+@keyframes hide {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-65px);
+	}
+}
+@keyframes show {
+	0% {
+		transform: translateY(-65px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+.visable {
+	display: flex;
+}
+.hidden {
+	display: none;
 }
