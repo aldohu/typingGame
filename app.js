@@ -14,7 +14,11 @@ let timeLeft = 0;
 let timeSet;
 let timeoutId;
 let randomWord;
-
+let settingsLevel =
+	localStorage.getItem('level') !== null
+		? localStorage.getItem('level')
+		: 'medium';
+level.value = localStorage.getItem('level') !== null ? settingsLevel : 'medium';
 function showDifficultySettings() {
 	difficulty.classList.toggle('hide');
 	difficulty.classList.toggle('show');
@@ -30,6 +34,7 @@ function updateTimer() {
 	}
 	timeLeft += timeSet;
 	time.textContent = timeLeft;
+	localStorage.setItem('level', level.value);
 }
 
 const words = [
